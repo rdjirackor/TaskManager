@@ -1,26 +1,21 @@
 package com.archimedes.taskman;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.firebase.FirebaseApp;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.AuthResult;
-import com.google.android.gms.tasks.Task;
 
 public class CreateAccount extends AppCompatActivity {
 
     private EditText emailEditText;
     private EditText passwordEditText;
 
-    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +24,6 @@ public class CreateAccount extends AppCompatActivity {
 
         setContentView(R.layout.createaccount);
 
-        mAuth = FirebaseAuth.getInstance();
 
         emailEditText = findViewById(R.id.editTextEmail);
         passwordEditText = findViewById(R.id.editTextPassword);
@@ -38,28 +32,36 @@ public class CreateAccount extends AppCompatActivity {
         createAccountButton.setOnClickListener(v -> {
             String email = emailEditText.getText().toString();
             String password = passwordEditText.getText().toString();
-
-            // Validate input here
-
-            createUserWithEmailAndPassword(email, password);
+            if (isValidEmail(email) && (isPassword(password)) ){
+                SharedPreferences preferences= getSharedPreferences("SavedStuff", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putString("password", password);
+                editor.putString("email", email);
+                editor.apply();
+                Toast.makeText(CreateAccount.this, "Account created!",
+                        Toast.LENGTH_SHORT).show();
+            } else {
+                    // Account creation failed
+                    Toast.makeText(CreateAccount.this, "Account creation failed: ",Toast.LENGTH_SHORT).show();
+                }
         });
     }
-
-    private void createUserWithEmailAndPassword(String email, String password) {
-        mAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, task -> {
-                    if (task.isSuccessful()) {
-                        // User account created successfully
-                        Toast.makeText(CreateAccount.this, "Account created!",
-                                Toast.LENGTH_SHORT).show();
-                        // Add your logic to proceed after successful registration
-                    } else {
-                        // Account creation failed
-                        Toast.makeText(CreateAccount.this, "Account creation failed: " + task.getException().getMessage(),
-                                Toast.LENGTH_SHORT).show();
-                        System.out.println(task.getException().getMessage());
-                    }
-
-                });
+    public boolean isValidEmail(String email) {
+        if (email == null) {
+            return false;
+        }
+        String regex = "^[A-Za-z0-9+_.-]+@(.+)$"; // Regular expression for email validation
+        return email.matches(regex);
     }
+    public static boolean isPassword(String password) {
+
+        if (password.length() < 8) {
+            return false;
+        }
+        if (!password.matches(".*[A-Z].*")) {
+            return false;
+        }
+        return password.matches(".*\\d.*");
+    }
+
 }
