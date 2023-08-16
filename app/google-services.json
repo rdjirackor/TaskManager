@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "587888057380",
+    "project_id": "task-manager-uno",
+    "storage_bucket": "task-manager-uno.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:587888057380:android:dc57be6e3a5a2406df0cb1",
+        "android_client_info": {
+          "package_name": "com.archimedes.taskman"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "587888057380-8nkmvke836d4gsejfb8h7h66fmo3ddg0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSTXI77vzMct6r4WUg6wFxFADvp8kWM0I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "587888057380-8nkmvke836d4gsejfb8h7h66fmo3ddg0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
