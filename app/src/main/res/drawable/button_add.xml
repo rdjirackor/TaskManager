@@ -1,0 +1,26 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Button Background -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#000000" />
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+
+    <!-- Button Icon (Plus Symbol) -->
+    <item android:gravity="center">
+        <shape android:shape="rectangle">
+            <!-- Horizontal Line -->
+            <size android:width="2dp" android:height="20dp" />
+            <solid android:color="#FFFFFF" />
+        </shape>
+    </item>
+
+    <item android:gravity="center">
+        <shape android:shape="rectangle">
+            <!-- Vertical Line -->
+            <size android:width="20dp" android:height="2dp" />
+            <solid android:color="#FFFFFF" />
+        </shape>
+    </item>
+</layer-list>

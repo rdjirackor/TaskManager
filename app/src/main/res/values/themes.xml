@@ -1,9 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
+
     <!-- Base application theme. -->
     <style name="Base.Theme.TaskManager" parent="Theme.Material3.DayNight.NoActionBar">
+
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <!-- Change the color of the app's primary branding color -->
+        <item name="colorPrimary">@color/my_light_primary</item>
+
+        <!-- Change the color of the app's dark toolbar and status bar -->
+        <item name="colorPrimaryDark">@color/my_light_primary_dark</item>
+
+        <!-- Change the color of UI elements that show user interaction -->
+        <item name="colorAccent">@color/my_light_accent</item>
+
+        <!-- Customize the default text appearance -->
+        <item name="android:textAppearance">@style/TextAppearance.TaskManager</item>
     </style>
 
-    <style name="Theme.TaskManager" parent="Base.Theme.TaskManager" />
+    <!-- Custom text appearance style -->
+    <style name="TextAppearance.TaskManager" parent="TextAppearance.MaterialComponents.Headline6">
+        <!-- Change the text color -->
+        <item name="android:textColor">@color/textColorPrimary</item>
+
+        <!-- Change the text size -->
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!-- Application theme that inherits from the base theme -->
+    <style name="Theme.TaskManager" parent="Base.Theme.TaskManager">
+        <!-- Add any additional customizations for the app theme here -->
+    </style>
 </resources>
