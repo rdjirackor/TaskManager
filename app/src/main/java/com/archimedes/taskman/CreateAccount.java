@@ -1,6 +1,7 @@
 package com.archimedes.taskman;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
@@ -32,6 +33,7 @@ public class CreateAccount extends AppCompatActivity {
         createAccountButton.setOnClickListener(v -> {
             String email = emailEditText.getText().toString();
             String password = passwordEditText.getText().toString();
+
             if (isValidEmail(email) && (isPassword(password)) ){
                 SharedPreferences preferences= getSharedPreferences("SavedStuff", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = preferences.edit();
@@ -40,6 +42,8 @@ public class CreateAccount extends AppCompatActivity {
                 editor.apply();
                 Toast.makeText(CreateAccount.this, "Account created!",
                         Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(this, AddTask.class);
+                startActivity(intent);
             } else {
                     // Account creation failed
                     Toast.makeText(CreateAccount.this, "Account creation failed: ",Toast.LENGTH_SHORT).show();
@@ -48,17 +52,25 @@ public class CreateAccount extends AppCompatActivity {
     }
     public boolean isValidEmail(String email) {
         if (email == null) {
+            Toast.makeText(this, "Where's the email?", Toast.LENGTH_SHORT).show();
             return false;
         }
         String regex = "^[A-Za-z0-9+_.-]+@(.+)$"; // Regular expression for email validation
-        return email.matches(regex);
+        if(!email.matches(regex)){
+            Toast.makeText(this, "That's not an email address", Toast.LENGTH_SHORT).show();
+            return false;
+        } else {
+            return true;
+        }
     }
-    public static boolean isPassword(String password) {
+    public boolean isPassword(String password) {
 
         if (password.length() < 8) {
+            Toast.makeText(this, "Password should be longer than 8 chars!", Toast.LENGTH_SHORT).show();
             return false;
         }
         if (!password.matches(".*[A-Z].*")) {
+            Toast.makeText(this, "Add some capital letters and numbers", Toast.LENGTH_SHORT).show();
             return false;
         }
         return password.matches(".*\\d.*");
