@@ -8,6 +8,7 @@ package com.archimedes.taskman;
  */
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -40,10 +41,8 @@ public class EditTask extends AppCompatActivity {
         editName = findViewById(R.id.editN);
         editDesc = findViewById(R.id.editD);
 
-        Button test =findViewById(R.id.TPL);
+        //Button test =findViewById(R.id.TPL);
 
-        String TaskName=editName.getText().toString();
-        String TaskDesc=editDesc.getText().toString();
 
 
         seekerSensitive.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -64,7 +63,6 @@ public class EditTask extends AppCompatActivity {
 
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-                // Not needed for this example
             }
 
             @Override
@@ -76,13 +74,24 @@ public class EditTask extends AppCompatActivity {
         saveTask.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                editor.putString("Priority" + String.valueOf(count), String.valueOf(priority));
-                editor.putString("TaskName" + String.valueOf(count), TaskName);
-                editor.putString("TaskDesc" + String.valueOf(count), TaskDesc);
+                String TaskName= editName.getText().toString();
+                String TaskDesc=editDesc.getText().toString();
+                Toast.makeText(EditTask.this, TaskName ,Toast.LENGTH_SHORT).show();
 
+                editor.putString("Priority" + String.valueOf(count), String.valueOf(priority));
+                Intent resultIntent = new Intent();
+                resultIntent.putExtra("descriptionName", "TaskName: "+TaskName);
+                resultIntent.putExtra("descriptionDet","TaskDesc:"+TaskDesc);
+                setResult(RESULT_OK, resultIntent);
+                finish();
+
+
+
+               /**
+                editor.putString("TaskDet" + String.valueOf(count), TaskName+"\n"+TaskDesc);
                 count++;
                 editor.putInt("count", count);
-                editor.commit(); // Use commit instead of apply
+                editor.commit(); // Use commit instead of apply**/
             }
         });
        /** test.setOnClickListener(new View.OnClickListener() {
