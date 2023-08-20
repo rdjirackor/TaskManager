@@ -1,10 +1,10 @@
 package com.archimedes.taskman;
 /**
- In this code, I am basically receiving the selected priority rom the user from the seekbar,
- and then I want to store that priority, but then Anytime I store the priority and tehn on another instance tyeh user does the same thing
- I dont want the previous priority to be overwritten and so I initialiazed, a variable which I cakled Are, which will
- basically be added to the priority, to distinguish it from the prevoius. I will optimize this oce I get better, hey..
- *
+ In this code, I am basically receiving the selected priority from the user from the seekbar,
+ and then I want to store that priority, but then Anytime I store the priority and then on another instance the user does the same thing
+ I don't want the previous priority to be overwritten and so I initialized, a variable which I called count, which will
+ basically be added to the priority, to distinguish it from the previous. I will optimize this as soon I get better at android development, hey.. chill!
+
  */
 
 import android.content.Context;
@@ -15,7 +15,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.SeekBar;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -24,7 +23,7 @@ public class EditTask extends AppCompatActivity {
     SharedPreferences preferences;
     SharedPreferences.Editor editor;
     int count;
-    private EditText editName, editDesc;
+    private EditText editName, editDesc, editNote;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,8 +39,10 @@ public class EditTask extends AppCompatActivity {
         Button saveTask = findViewById(R.id.saveTask);
         editName = findViewById(R.id.editN);
         editDesc = findViewById(R.id.editD);
+        editNote = findViewById(R.id.editD2);
 
-        //Button test =findViewById(R.id.TPL);
+        //Button test =findViewById(R.id.TestingPL);
+        // P means Priority, I forgot the meaning of L, but hey I've deleted the Button anyway
 
 
 
@@ -75,9 +76,11 @@ public class EditTask extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String TaskName= editName.getText().toString();
-                String TaskDesc=editDesc.getText().toString();
+                String TaskDesc= editDesc.getText().toString();
+                String TaskNotes= editNote.getText().toString();
 
                 editor.putString("Priority" + String.valueOf(count), String.valueOf(priority));
+                editor.putString("TaskNote" + String.valueOf(count), TaskNotes);
                 count++;
                 editor.putInt("Count",count);
                 editor.apply();
