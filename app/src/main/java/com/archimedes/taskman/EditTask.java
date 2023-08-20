@@ -34,7 +34,7 @@ public class EditTask extends AppCompatActivity {
         // Initialize SharedPreferences
         preferences = getSharedPreferences("SavedStuff", Context.MODE_PRIVATE);
         editor = preferences.edit();
-        count = preferences.getInt("count", 0);
+        count = preferences.getInt("Count", 0);
 
         SeekBar seekerSensitive = findViewById(R.id.seekBar);
         Button saveTask = findViewById(R.id.saveTask);
@@ -76,9 +76,12 @@ public class EditTask extends AppCompatActivity {
             public void onClick(View v) {
                 String TaskName= editName.getText().toString();
                 String TaskDesc=editDesc.getText().toString();
-                Toast.makeText(EditTask.this, TaskName ,Toast.LENGTH_SHORT).show();
 
                 editor.putString("Priority" + String.valueOf(count), String.valueOf(priority));
+                count++;
+                editor.putInt("Count",count);
+                editor.apply();
+
                 Intent resultIntent = new Intent();
                 resultIntent.putExtra("descriptionName", "TaskName: "+TaskName);
                 resultIntent.putExtra("descriptionDet","TaskDesc:"+TaskDesc);
@@ -87,26 +90,9 @@ public class EditTask extends AppCompatActivity {
 
 
 
-               /**
-                editor.putString("TaskDet" + String.valueOf(count), TaskName+"\n"+TaskDesc);
-                count++;
-                editor.putInt("count", count);
-                editor.commit(); // Use commit instead of apply**/
+
             }
         });
-       /** test.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String a=preferences.getString("Priority0","None yet!");
-                String b=preferences.getString("TaskName0","None yet!");
-                String c=preferences.getString("TaskDesc0","None yet!");
-                String a1=preferences.getString("Priority1","None yet!");
-                String b1=preferences.getString("TaskName1","None yet!");
-                String c1=preferences.getString("TaskDesc1","None yet!");
-                String enigma = a+b+c;
-                String enigma1 = a1+b1+c1;
-                Toast.makeText(EditTask.this, enigma+"\n"+enigma1, Toast.LENGTH_SHORT).show();
-            }
-        });**/
+
     }
 }

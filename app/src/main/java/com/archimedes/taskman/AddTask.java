@@ -1,6 +1,4 @@
 package com.archimedes.taskman;
-
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -17,14 +15,14 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
 public class AddTask extends AppCompatActivity {
     private static final int REQUEST_CODE_ADD_TODO = 1;
     private TextView tx1,tx2,tx3,tx4,tx5,tx6,tx7,tx8,tx9,tx10,tx11,tx12,tx13,tx14,tx15,tx16,tx17,tx18,tx19,tx20;
     private SharedPreferences preferences;
     private SharedPreferences.Editor editor;
-    
-        @Override
+
+
+    @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.add_task);
@@ -32,11 +30,15 @@ public class AddTask extends AppCompatActivity {
             editor = preferences.edit();
             Drawable drawable = getResources().getDrawable(R.drawable.background);
             FloatingActionButton open = findViewById(R.id.floatingActionButton);
-            open.setOnClickListener(new View.OnClickListener() {
+
+        open.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     openEditTask();
                 }
+
+
+
             });
 
 
@@ -71,6 +73,7 @@ public class AddTask extends AppCompatActivity {
             tx3.setTextSize(20);
             tx4.setTextSize(20);
             tx5.setTextSize(20);
+            tx6.setTextSize(20);
             tx7.setTextSize(20);
             tx8.setTextSize(20);
             tx9.setTextSize(20);
@@ -133,6 +136,24 @@ public class AddTask extends AppCompatActivity {
             String firstText = preferences.getString("TaskName0", "")+"\n"+preferences.getString("TaskDet0", "");
             String secText = preferences.getString("TaskName1", "")+"\n"+preferences.getString("TaskDet1", "");
             String thiText = preferences.getString("TaskName2", "")+"\n"+preferences.getString("TaskDet2", "");
+            String foText = preferences.getString("TaskName3", "")+"\n"+preferences.getString("TaskDet3", "");
+            String fiText = preferences.getString("TaskName4", "")+"\n"+preferences.getString("TaskDet4", "");
+            String siText = preferences.getString("TaskName5", "")+"\n"+preferences.getString("TaskDet5", "");
+            String sevText = preferences.getString("TaskName6", "")+"\n"+preferences.getString("TaskDet6", "");
+            String eiText = preferences.getString("TaskName7", "")+"\n"+preferences.getString("TaskDet7", "");
+            String niText = preferences.getString("TaskName8", "")+"\n"+preferences.getString("TaskDet8", "");
+            String teText = preferences.getString("TaskName9", "")+"\n"+preferences.getString("TaskDet9", "");
+            String eleText = preferences.getString("TaskName10", "")+"\n"+preferences.getString("TaskDet10", "");
+            String tweText = preferences.getString("TaskName11", "")+"\n"+preferences.getString("TaskDet11", "");
+            String thirText = preferences.getString("TaskName12", "")+"\n"+preferences.getString("TaskDet12", "");
+            String fortText = preferences.getString("TaskName13", "")+"\n"+preferences.getString("TaskDet13", "");
+            String fivtText = preferences.getString("TaskName14", "")+"\n"+preferences.getString("TaskDet14", "");
+            String sixtText = preferences.getString("TaskName15", "")+"\n"+preferences.getString("TaskDet15", "");
+            String seventText = preferences.getString("TaskName16", "")+"\n"+preferences.getString("TaskDet16", "");
+            String eighteText = preferences.getString("TaskName17", "")+"\n"+preferences.getString("TaskDet17", "");
+            String ninetText = preferences.getString("TaskName18", "")+"\n"+preferences.getString("TaskDet18", "");
+            String twentyText = preferences.getString("TaskName19", "")+"\n"+preferences.getString("TaskDet19", "");
+
 
 
             if (!firstText.equals("\n")){
@@ -146,7 +167,57 @@ public class AddTask extends AppCompatActivity {
             if (!thiText.equals("\n")){
                 tx3.setText(thiText);
                 tx3.setBackground(drawable);
-            }
+            }if (!foText.equals("\n")){
+                tx4.setText(foText);
+                tx4.setBackground(drawable);
+            }if (!fiText.equals("\n")){
+                tx5.setText(fiText);
+                tx5.setBackground(drawable);
+            }if (!siText.equals("\n")){
+                tx6.setText(siText);
+                tx6.setBackground(drawable);
+            }if (!sevText.equals("\n")){
+                tx7.setText(sevText);
+                tx7.setBackground(drawable);
+            }if (!eiText.equals("\n")){
+                tx8.setText(eiText);
+                tx8.setBackground(drawable);
+            }if (!niText.equals("\n")){
+                tx9.setText(niText);
+                tx9.setBackground(drawable);
+            }if (!teText.equals("\n")){
+                tx10.setText(teText);
+                tx10.setBackground(drawable);
+            }if (!eleText.equals("\n")){
+                tx11.setText(eleText);
+                tx11.setBackground(drawable);
+            }if (!tweText.equals("\n")){
+                tx12.setText(tweText);
+                tx12.setBackground(drawable);
+            }if (!thirText.equals("\n")){
+                tx13.setText(thirText);
+                tx13.setBackground(drawable);
+            }if (!fortText.equals("\n")){
+                tx14.setText(fortText);
+                tx14.setBackground(drawable);
+            }if (!fivtText.equals("\n")){
+                tx15.setText(fivtText);
+                tx15.setBackground(drawable);
+            }if (!sixtText.equals("\n")){
+                tx16.setText(sixtText);
+                tx16.setBackground(drawable);
+            }if (!seventText.equals("\n")){
+                tx17.setText(seventText);
+                tx17.setBackground(drawable);
+            }if (!eighteText.equals("\n")){
+                tx18.setText(eighteText);
+                tx18.setBackground(drawable);
+            }if (!ninetText.equals("\n")){
+                tx19.setText(ninetText);
+                tx19.setBackground(drawable);
+            }if (!twentyText.equals("\n")){
+                tx20.setText(twentyText);
+                tx20.setBackground(drawable);}
             
 /**tx1.setOnClickListener(new View.OnClickListener() {
     @Override
@@ -226,10 +297,10 @@ private boolean doubleBackToExitPressedOnce = false;
                     tx6.setBackground(getDrawable(R.drawable.background));
                 } else if (tx7.getText().toString().isEmpty()) {
                     tx7.setText(desc+"\n"+det);
-                    editor.putString("TaskName7", desc);
-                    editor.putString("TaskDet7", det);
+                    editor.putString("TaskName6", desc);
+                    editor.putString("TaskDet6", det);
                     editor.apply();
-                    tx8.setBackground(getDrawable(R.drawable.background));
+                    tx7.setBackground(getDrawable(R.drawable.background));
                 } else if (tx8.getText().toString().isEmpty()) {
                     tx8.setText(desc+"\n"+det);
                     editor.putString("TaskName7", desc);
@@ -311,7 +382,7 @@ private boolean doubleBackToExitPressedOnce = false;
                 }
                 else {
                     CharSequence text = "My Limit has been exceeded!!!";
-                    int duration = Toast.LENGTH_SHORT;
+                    int duration = Toast.LENGTH_LONG;
 
                     Toast toast = Toast.makeText(this, text, duration);
                     toast.show();

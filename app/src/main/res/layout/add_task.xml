@@ -5,7 +5,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AddTask"
+    android:background="@color/white"
     >
+
+   <Button
+       android:id="@+id/Done"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toStartOf="@id/Active"
+       app:layout_constraintVertical_bias="0.0"
+       android:background="@drawable/button"
+       android:layout_margin="8dp"
+       android:text="Done" />
+
+   <Button
+       android:id="@+id/Active"
+       android:background="@drawable/button"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintStart_toEndOf="@id/Done"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintVertical_bias="0.0"
+       android:layout_margin="8dp"
+       android:text="Active" />
+
 
    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"
@@ -26,6 +54,7 @@
    <ScrollView
        android:layout_width="match_parent"
        android:layout_height="match_parent"
+       android:layout_marginTop="70dp"
        app:layout_constraintBottom_toBottomOf="parent"
        app:layout_constraintEnd_toEndOf="parent"
        app:layout_constraintStart_toStartOf="parent"

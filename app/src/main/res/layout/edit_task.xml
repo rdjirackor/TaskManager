@@ -80,17 +80,6 @@
         app:layout_constraintTop_toBottomOf="@+id/editD"
         app:layout_constraintVertical_bias="0.538" />
 
-    <!--<Button
-        android:id="@+id/TPL"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/button"
-        android:text="Test Priority Level"
-        app:layout_constraintBottom_toTopOf="@+id/editD"
-        app:layout_constraintEnd_toStartOf="@+id/seekBar"
-        app:layout_constraintHorizontal_bias="0.133"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editN"
-        app:layout_constraintVertical_bias="0.507" />-->
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
