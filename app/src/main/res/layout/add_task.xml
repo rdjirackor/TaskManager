@@ -23,7 +23,6 @@
 
    <Button
        android:id="@+id/Active"
-       android:background="@drawable/button"
        android:layout_width="0dp"
        android:layout_height="wrap_content"
        app:layout_constraintTop_toTopOf="parent"

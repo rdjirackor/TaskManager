@@ -6,4 +6,8 @@
     <color name="my_light_primary_dark">#FFFFFF</color>
     <color name="textColorPrimary">#FFFEFF</color>
     <color name="my_light_accent">#FFFEFF</color>
+    <color name="purple">#800080</color> <!-- Added purple color -->
+    <color name="gold">#FFD700</color> <!-- Added gold color -->
+    <color name="yellow">#FFFF00</color> <!-- Added yellow color -->
+    <color name="orange">#FFA500</color>
 </resources>
