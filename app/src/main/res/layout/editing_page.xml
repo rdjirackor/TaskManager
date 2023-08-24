@@ -5,14 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EditTask"
+    tools:context=".EditingPage"
     android:background="@color/white">
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="402dp"
         android:layout_height="31dp"
-        android:hint="Enter/Edit Task Details"
+        android:hint="Edit Task Details"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.05" />
 
     <EditText
-        android:id="@+id/editN"
+        android:id="@+id/editNa"
         android:layout_width="414dp"
         android:layout_height="77dp"
         android:background="@drawable/background"
@@ -37,7 +37,7 @@
         app:layout_constraintVertical_bias="0.052" />
 
     <EditText
-        android:id="@+id/editD"
+        android:id="@+id/editDe"
         android:layout_width="match_parent"
         android:layout_height="81dp"
         android:background="@drawable/background"
@@ -53,7 +53,7 @@
         app:layout_constraintVertical_bias="0.376" />
 
     <EditText
-        android:id="@+id/editD2"
+        android:id="@+id/editDe2"
         android:layout_width="match_parent"
         android:layout_height="247dp"
         android:background="@drawable/background"
@@ -76,15 +76,15 @@
         android:background="@drawable/background"
         android:max="2"
         android:progress="1"
-        app:layout_constraintBottom_toTopOf="@+id/editD"
+        app:layout_constraintBottom_toTopOf="@+id/editDe"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editN"
+        app:layout_constraintTop_toBottomOf="@+id/editNa"
         app:layout_constraintVertical_bias="0.461" />
 
     <Button
-        android:id="@+id/saveTask"
+        android:id="@+id/saver"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/button_modes"
@@ -93,7 +93,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editD"
+        app:layout_constraintTop_toBottomOf="@+id/editDe"
         app:layout_constraintVertical_bias="0.909" />
 
 

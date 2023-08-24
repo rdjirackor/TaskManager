@@ -9,7 +9,9 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,6 +24,7 @@ public class AddTask extends AppCompatActivity {
     private CheckBox c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15,c16,c17,c18,c19,c20;
     private SharedPreferences preferences;
     private SharedPreferences.Editor editor;
+    public static Boolean tb1,tb2,tb3=false;
 
 
     @Override
@@ -31,9 +34,11 @@ public class AddTask extends AppCompatActivity {
             preferences = getSharedPreferences("SavedStuff", Context.MODE_PRIVATE);
             editor = preferences.edit();
             Drawable drawable = getResources().getDrawable(R.drawable.background);
+            Drawable drawable1 = getResources().getDrawable(R.drawable.button_modes);
             FloatingActionButton open = findViewById(R.id.floatingActionButton);
+            open.setBackground(drawable1);
 
-        open.setOnClickListener(new View.OnClickListener() {
+            open.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     openEditTask();
@@ -42,13 +47,24 @@ public class AddTask extends AppCompatActivity {
 
 
             });
+            Button active =findViewById(R.id.Active);
+            active.setBackground(drawable1);
+
+            Button done = findViewById(R.id.Done);
+            done.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    openDone();
+                }
+            });
 
 
-
-
-
-
-
+            active.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(AddTask.this, "You are on the Active Section", Toast.LENGTH_SHORT).show();
+                }
+            });
             tx1 = findViewById(R.id.t1);
             tx2 = findViewById(R.id.t2);
             tx3 = findViewById(R.id.t3);
@@ -211,83 +227,148 @@ public class AddTask extends AppCompatActivity {
                 tx6.setBackground(drawable);
             c6.setVisibility(View.VISIBLE);
 
-        }if (!sevText.equals("\n")){
-                tx7.setText(sevText);
-                tx7.setBackground(drawable);
-            c7.setVisibility(View.VISIBLE);
+            }if (!sevText.equals("\n")){
+                    tx7.setText(sevText);
+                    tx7.setBackground(drawable);
+                c7.setVisibility(View.VISIBLE);
 
-        }if (!eiText.equals("\n")){
-                tx8.setText(eiText);
-                tx8.setBackground(drawable);
-            c8.setVisibility(View.VISIBLE);
+            }if (!eiText.equals("\n")){
+                    tx8.setText(eiText);
+                    tx8.setBackground(drawable);
+                c8.setVisibility(View.VISIBLE);
 
-        }if (!niText.equals("\n")){
-                tx9.setText(niText);
-                tx9.setBackground(drawable);
-            c9.setVisibility(View.VISIBLE);
+            }if (!niText.equals("\n")){
+                    tx9.setText(niText);
+                    tx9.setBackground(drawable);
+                c9.setVisibility(View.VISIBLE);
 
-        }if (!teText.equals("\n")){
-                tx10.setText(teText);
-                tx10.setBackground(drawable);
-            c10.setVisibility(View.VISIBLE);
+            }if (!teText.equals("\n")){
+                    tx10.setText(teText);
+                    tx10.setBackground(drawable);
+                c10.setVisibility(View.VISIBLE);
 
-        }if (!eleText.equals("\n")){
-                tx11.setText(eleText);
-                tx11.setBackground(drawable);
-            c11.setVisibility(View.VISIBLE);
+            }if (!eleText.equals("\n")){
+                    tx11.setText(eleText);
+                    tx11.setBackground(drawable);
+                c11.setVisibility(View.VISIBLE);
 
-        }if (!tweText.equals("\n")){
-                tx12.setText(tweText);
-                tx12.setBackground(drawable);
-            c12.setVisibility(View.VISIBLE);
+            }if (!tweText.equals("\n")){
+                    tx12.setText(tweText);
+                    tx12.setBackground(drawable);
+                c12.setVisibility(View.VISIBLE);
 
-        }if (!thirText.equals("\n")){
-                tx13.setText(thirText);
-                tx13.setBackground(drawable);
-            }if (!fortText.equals("\n")){
-                tx14.setText(fortText);
-                tx14.setBackground(drawable);
-            c14.setVisibility(View.VISIBLE);
+            }if (!thirText.equals("\n")){
+                    tx13.setText(thirText);
+                    tx13.setBackground(drawable);
+                }if (!fortText.equals("\n")){
+                    tx14.setText(fortText);
+                    tx14.setBackground(drawable);
+                c14.setVisibility(View.VISIBLE);
 
-        }if (!fivtText.equals("\n")){
-                tx15.setText(fivtText);
-                tx15.setBackground(drawable);
-            c15.setVisibility(View.VISIBLE);
+            }if (!fivtText.equals("\n")){
+                    tx15.setText(fivtText);
+                    tx15.setBackground(drawable);
+                c15.setVisibility(View.VISIBLE);
 
-        }if (!sixtText.equals("\n")){
-                tx16.setText(sixtText);
-                tx16.setBackground(drawable);
-            c16.setVisibility(View.VISIBLE);
+            }if (!sixtText.equals("\n")){
+                    tx16.setText(sixtText);
+                    tx16.setBackground(drawable);
+                c16.setVisibility(View.VISIBLE);
 
-        }if (!seventText.equals("\n")){
-                tx17.setText(seventText);
-                tx17.setBackground(drawable);
-            c17.setVisibility(View.VISIBLE);
+            }if (!seventText.equals("\n")){
+                    tx17.setText(seventText);
+                    tx17.setBackground(drawable);
+                c17.setVisibility(View.VISIBLE);
 
-        }if (!eighteText.equals("\n")){
-                tx18.setText(eighteText);
-                tx18.setBackground(drawable);
-            c18.setVisibility(View.VISIBLE);
+            }if (!eighteText.equals("\n")){
+                    tx18.setText(eighteText);
+                    tx18.setBackground(drawable);
+                c18.setVisibility(View.VISIBLE);
 
-        }if (!ninetText.equals("\n")){
-                tx19.setText(ninetText);
-                tx19.setBackground(drawable);
-            c19.setVisibility(View.VISIBLE);
+            }if (!ninetText.equals("\n")){
+                    tx19.setText(ninetText);
+                    tx19.setBackground(drawable);
+                c19.setVisibility(View.VISIBLE);
 
-        }if (!twentyText.equals("\n")){
-                tx20.setText(twentyText);
-                tx20.setBackground(drawable);
-            c20.setVisibility(View.VISIBLE);
-        }
-            
-/**tx1.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        Intent resultIntent = new Intent();
-        resultIntent.putExtra("editName0",);
-        setResult(RESULT_OK, resultIntent);
-        finish();    }
-});**/
+            }if (!twentyText.equals("\n")){
+                    tx20.setText(twentyText);
+                    tx20.setBackground(drawable);
+                c20.setVisibility(View.VISIBLE);
+            }
+
+        tx1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AddTask.this, EditingPage.class);
+                startActivity(intent);
+                tb1=true;
+            }
+        });
+
+            c1 = findViewById(R.id.cb1);
+            c2 = findViewById(R.id.cb2);
+            c3 = findViewById(R.id.cb3);
+            c1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked) {
+                        String FiN= preferences.getString("TaskName0", "");
+                        String FiD= preferences.getString("TaskDet0", "");
+                        editor.putString("DoneTaskName0",FiN);
+                        editor.putString("DoneTaskDet0",FiD);
+                        editor.putString("TaskName0","");
+                        editor.putString("TaskDet0","");
+                        editor.apply();
+                        tx1.setVisibility(View.GONE);
+                        c1.setVisibility(View.GONE);
+
+                       // refresh();
+
+                    } else {
+                        Toast.makeText(AddTask.this, "Wait a min, how on earth did you even get here?", Toast.LENGTH_LONG).show();
+                    }
+                }
+            });c2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked) {
+                        String FiN= preferences.getString("TaskName0", "");
+                        String FiD= preferences.getString("TaskDet0", "");
+                        editor.putString("DoneTaskName1",FiN);
+                        editor.putString("DoneTaskDet1",FiD);
+                        editor.putString("TaskName1","");
+                        editor.putString("TaskDet1","");
+                        editor.apply();
+                        tx1.setVisibility(View.GONE);
+                        c1.setVisibility(View.GONE);
+
+                       // refresh();
+
+                    } else {
+                        Toast.makeText(AddTask.this, "Wait a min, how on earth did you even get here?", Toast.LENGTH_LONG).show();
+                    }
+                }
+            });c3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked) {
+                        String FiN= preferences.getString("TaskName0", "");
+                        String FiD= preferences.getString("TaskDet0", "");
+                        editor.putString("DoneTaskName2",FiN);
+                        editor.putString("DoneTaskDet2",FiD);
+                        editor.putString("TaskName2","");
+                        editor.putString("TaskDet2","");
+                        editor.apply();
+                        tx1.setVisibility(View.GONE);
+                        c1.setVisibility(View.GONE);
+
+                       // refresh();
+
+                    } else {
+                        Toast.makeText(AddTask.this, "Wait a min, how on earth did you even get here?", Toast.LENGTH_LONG).show();
+                    }
+                }
+            });
 
 
         }
@@ -471,7 +552,14 @@ private boolean doubleBackToExitPressedOnce = false;
             }}
     public void openEditTask(){
         Intent intent=new Intent(this,EditTask.class);
-        startActivityForResult(intent, REQUEST_CODE_ADD_TODO);    }
+        startActivityForResult(intent, REQUEST_CODE_ADD_TODO);
+        }
+    public void openDone(){
+        Intent intent=new Intent(this,Done.class);
+        startActivity(intent);
+        }
+
 
         
     }
+

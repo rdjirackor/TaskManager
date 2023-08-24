@@ -11,10 +11,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.SeekBar;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -24,6 +26,8 @@ public class EditTask extends AppCompatActivity {
     SharedPreferences.Editor editor;
     int count;
     private EditText editName, editDesc, editNote;
+    private static final int REQUEST_CODE_ADD_TODO = 1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,27 +79,72 @@ public class EditTask extends AppCompatActivity {
         saveTask.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String TaskName= editName.getText().toString();
-                String TaskDesc= editDesc.getText().toString();
-                String TaskNotes= editNote.getText().toString();
-
-                editor.putString("Priority" + String.valueOf(count), String.valueOf(priority));
-                editor.putString("TaskNote" + String.valueOf(count), TaskNotes);
-                count++;
-                editor.putInt("Count",count);
-                editor.apply();
-
-                Intent resultIntent = new Intent();
-                resultIntent.putExtra("descriptionName", "TaskName: "+TaskName);
-                resultIntent.putExtra("descriptionDet","TaskDesc:"+TaskDesc);
-                setResult(RESULT_OK, resultIntent);
-                finish();
-
-
-
-
+                saveThem();
             }
         });
 
+    }
+
+
+   /** @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == RESULT_OK) {
+            String name = data.getStringExtra("descriptionName");
+            String descr = data.getStringExtra("descriptionDet");
+            String detNotes = data.getStringExtra("descriptionNotes");
+            editName.setText(name);
+            editDesc.setText(descr);
+            editNote.setText(detNotes);
+
+        }}*/
+   protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+       super.onActivityResult(requestCode, resultCode, data);
+       if (requestCode==REQUEST_CODE_ADD_TODO && resultCode == RESULT_OK) {
+           String name = data.getStringExtra("descriptionName");
+           String descr = data.getStringExtra("descriptionDet");
+           String detNotes = data.getStringExtra("descriptionNotes");
+
+           // Verify if data is received correctly
+           Toast.makeText(EditTask.this, "This is the name: "+name, Toast.LENGTH_SHORT).show();
+
+           editName.setText(name);
+           editDesc.setText(descr);
+           editNote.setText(detNotes);
+           String TaskName= editName.getText().toString();
+           String TaskDesc= editDesc.getText().toString();
+           String TaskNotes= editNote.getText().toString();
+
+           editor.putString("Priority0", String.valueOf(priority));
+           editor.putString("TaskNote0", TaskNotes);
+           editor.putString("TaskDet0", TaskDesc);
+
+           Intent resultIntent = new Intent();
+           resultIntent.putExtra("descriptionName", "TaskName: "+TaskName);
+           resultIntent.putExtra("descriptionDet","TaskDesc:"+TaskDesc);
+           setResult(RESULT_OK, resultIntent);
+           finish();
+
+       }
+   }
+    public  void saveThem(){
+        String TaskName= editName.getText().toString();
+        String TaskDesc= editDesc.getText().toString();
+        String TaskNotes= editNote.getText().toString();
+
+        editor.putString("Priority" + String.valueOf(count), String.valueOf(priority));
+        editor.putString("TaskNote" + String.valueOf(count), TaskNotes);
+        editor.putString("editName" + String.valueOf(count), TaskName);
+        editor.putString("editDesc" + String.valueOf(count), TaskDesc);
+
+        count++;
+        editor.putInt("Count",count);
+        editor.apply();
+
+        Intent resultIntent = new Intent();
+        resultIntent.putExtra("descriptionName", "TaskName: "+TaskName);
+        resultIntent.putExtra("descriptionDet","TaskDesc:"+TaskDesc);
+        setResult(RESULT_OK, resultIntent);
+        finish();
     }
 }
