@@ -24,7 +24,9 @@ public class AddTask extends AppCompatActivity {
     private CheckBox c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15,c16,c17,c18,c19,c20;
     private SharedPreferences preferences;
     private SharedPreferences.Editor editor;
-    public static Boolean tb1,tb2,tb3=false;
+    public static Boolean tb1=false;
+    public static Boolean tb2=false;
+    public static Boolean tb3=false;
 
 
     @Override
@@ -303,6 +305,20 @@ public class AddTask extends AppCompatActivity {
                 startActivity(intent);
                 tb1=true;
             }
+        });tx2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AddTask.this, EditingPage.class);
+                startActivity(intent);
+                tb2=true;
+            }
+        });tx3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AddTask.this, EditingPage.class);
+                startActivity(intent);
+                tb3=true;
+            }
         });
 
             c1 = findViewById(R.id.cb1);
@@ -560,6 +576,5 @@ private boolean doubleBackToExitPressedOnce = false;
         }
 
 
-        
-    }
+}
 

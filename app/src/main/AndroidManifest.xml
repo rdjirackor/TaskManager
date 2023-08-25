@@ -30,7 +30,8 @@
             android:exported="true">
         </activity>
         <activity android:name=".Done"/>
-        <activity android:name=".EditingPage"/>
+        <activity android:name=".EditingPage"
+            />
     </application>
 
 </manifest>
