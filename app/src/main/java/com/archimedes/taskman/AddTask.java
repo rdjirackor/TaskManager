@@ -27,6 +27,23 @@ public class AddTask extends AppCompatActivity {
     public static Boolean tb1=false;
     public static Boolean tb2=false;
     public static Boolean tb3=false;
+    public static Boolean tb4=false;
+    public static Boolean tb5=false;
+    public static Boolean tb6=false;
+    public static Boolean tb7=false;
+    public static Boolean tb8=false;
+    public static Boolean tb9=false;
+    public static Boolean tb10=false;
+    public static Boolean tb11=false;
+    public static Boolean tb12=false;
+    public static Boolean tb13=false;
+    public static Boolean tb14=false;
+    public static Boolean tb15=false;
+    public static Boolean tb16=false;
+    public static Boolean tb17=false;
+    public static Boolean tb18=false;
+    public static Boolean tb19=false;
+    public static Boolean tb20=false;
 
 
     @Override
@@ -201,100 +218,120 @@ public class AddTask extends AppCompatActivity {
                 tx1.setText(firstText);
                 tx1.setBackground(drawable);
                 c1.setVisibility(View.VISIBLE);
+                tx1.setVisibility(View.VISIBLE);
 
             }
             if (!secText.equals("\n")){
                 tx2.setText(secText);
                 tx2.setBackground(drawable);
                 c2.setVisibility(View.VISIBLE);
+                tx2.setVisibility(View.VISIBLE);
 
             }
             if (!thiText.equals("\n")){
                 tx3.setText(thiText);
                 c3.setVisibility(View.VISIBLE);
+                tx3.setVisibility(View.VISIBLE);
+
 
                 tx3.setBackground(drawable);
             }if (!foText.equals("\n")){
                 tx4.setText(foText);
                 c4.setVisibility(View.VISIBLE);
-
-            tx4.setBackground(drawable);
+                tx4.setVisibility(View.VISIBLE);
+                tx4.setBackground(drawable);
             }if (!fiText.equals("\n")){
                 tx5.setText(fiText);
             c5.setVisibility(View.VISIBLE);
-
+            tx5.setVisibility(View.VISIBLE);
             tx5.setBackground(drawable);
             }if (!siText.equals("\n")){
                 tx6.setText(siText);
                 tx6.setBackground(drawable);
+            tx6.setVisibility(View.VISIBLE);
+
             c6.setVisibility(View.VISIBLE);
 
             }if (!sevText.equals("\n")){
                     tx7.setText(sevText);
-                    tx7.setBackground(drawable);
+            tx7.setVisibility(View.VISIBLE);
+            tx7.setBackground(drawable);
                 c7.setVisibility(View.VISIBLE);
 
             }if (!eiText.equals("\n")){
                     tx8.setText(eiText);
-                    tx8.setBackground(drawable);
+            tx8.setVisibility(View.VISIBLE);
+            tx8.setBackground(drawable);
                 c8.setVisibility(View.VISIBLE);
 
             }if (!niText.equals("\n")){
                     tx9.setText(niText);
-                    tx9.setBackground(drawable);
+            tx9.setVisibility(View.VISIBLE);
+            tx9.setBackground(drawable);
                 c9.setVisibility(View.VISIBLE);
 
             }if (!teText.equals("\n")){
-                    tx10.setText(teText);
+            tx10.setVisibility(View.VISIBLE);
+            tx10.setText(teText);
                     tx10.setBackground(drawable);
                 c10.setVisibility(View.VISIBLE);
 
             }if (!eleText.equals("\n")){
                     tx11.setText(eleText);
-                    tx11.setBackground(drawable);
+            tx11.setVisibility(View.VISIBLE);
+            tx11.setBackground(drawable);
                 c11.setVisibility(View.VISIBLE);
 
             }if (!tweText.equals("\n")){
-                    tx12.setText(tweText);
+            tx12.setVisibility(View.VISIBLE);
+            tx12.setText(tweText);
                     tx12.setBackground(drawable);
                 c12.setVisibility(View.VISIBLE);
 
             }if (!thirText.equals("\n")){
-                    tx13.setText(thirText);
+            tx13.setVisibility(View.VISIBLE);
+            tx13.setText(thirText);
                     tx13.setBackground(drawable);
                 }if (!fortText.equals("\n")){
                     tx14.setText(fortText);
-                    tx14.setBackground(drawable);
+            tx14.setVisibility(View.VISIBLE);
+            tx14.setBackground(drawable);
                 c14.setVisibility(View.VISIBLE);
 
             }if (!fivtText.equals("\n")){
                     tx15.setText(fivtText);
                     tx15.setBackground(drawable);
-                c15.setVisibility(View.VISIBLE);
+            tx15.setVisibility(View.VISIBLE);
+            c15.setVisibility(View.VISIBLE);
 
             }if (!sixtText.equals("\n")){
                     tx16.setText(sixtText);
                     tx16.setBackground(drawable);
-                c16.setVisibility(View.VISIBLE);
+            tx16.setVisibility(View.VISIBLE);
+            c16.setVisibility(View.VISIBLE);
 
             }if (!seventText.equals("\n")){
-                    tx17.setText(seventText);
+            tx17.setVisibility(View.VISIBLE);
+            tx17.setText(seventText);
                     tx17.setBackground(drawable);
                 c17.setVisibility(View.VISIBLE);
 
             }if (!eighteText.equals("\n")){
                     tx18.setText(eighteText);
-                    tx18.setBackground(drawable);
+            tx18.setVisibility(View.VISIBLE);
+            tx18.setBackground(drawable);
                 c18.setVisibility(View.VISIBLE);
 
             }if (!ninetText.equals("\n")){
                     tx19.setText(ninetText);
-                    tx19.setBackground(drawable);
+            tx19.setVisibility(View.VISIBLE);
+            tx19.setBackground(drawable);
                 c19.setVisibility(View.VISIBLE);
 
             }if (!twentyText.equals("\n")){
                     tx20.setText(twentyText);
-                    tx20.setBackground(drawable);
+            tx20.setVisibility(View.VISIBLE);
+            tx20.setBackground(drawable);
                 c20.setVisibility(View.VISIBLE);
             }
 
@@ -318,6 +355,125 @@ public class AddTask extends AppCompatActivity {
                 Intent intent = new Intent(AddTask.this, EditingPage.class);
                 startActivity(intent);
                 tb3=true;
+            }
+        });tx4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AddTask.this, EditingPage.class);
+                startActivity(intent);
+                tb4=true;
+            }
+        });tx5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AddTask.this, EditingPage.class);
+                startActivity(intent);
+                tb5=true;
+            }
+        });tx6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AddTask.this, EditingPage.class);
+                startActivity(intent);
+                tb6=true;
+            }
+        });tx7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AddTask.this, EditingPage.class);
+                startActivity(intent);
+                tb7=true;
+            }
+        });tx8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AddTask.this, EditingPage.class);
+                startActivity(intent);
+                tb8=true;
+            }
+        });tx9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AddTask.this, EditingPage.class);
+                startActivity(intent);
+                tb9=true;
+            }
+        });tx10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AddTask.this, EditingPage.class);
+                startActivity(intent);
+                tb10=true;
+            }
+        });tx11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AddTask.this, EditingPage.class);
+                startActivity(intent);
+                tb11=true;
+            }
+        });tx12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AddTask.this, EditingPage.class);
+                startActivity(intent);
+                tb12=true;
+            }
+        });tx13.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AddTask.this, EditingPage.class);
+                startActivity(intent);
+                tb13=true;
+            }
+        });tx14.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AddTask.this, EditingPage.class);
+                startActivity(intent);
+                tb14=true;
+            }
+        });tx15.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AddTask.this, EditingPage.class);
+                startActivity(intent);
+                tb15=true;
+            }
+        });tx16.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AddTask.this, EditingPage.class);
+                startActivity(intent);
+                tb16=true;
+            }
+        });tx17.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AddTask.this, EditingPage.class);
+                startActivity(intent);
+                tb17=true;
+            }
+        });tx18.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AddTask.this, EditingPage.class);
+                startActivity(intent);
+                tb18=true;
+            }
+        });tx19.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AddTask.this, EditingPage.class);
+                startActivity(intent);
+                tb19=true;
+            }
+        });tx20.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AddTask.this, EditingPage.class);
+                startActivity(intent);
+                tb20=true;
             }
         });
 
@@ -422,6 +578,7 @@ private boolean doubleBackToExitPressedOnce = false;
                     editor.putString("TaskName0", desc);
                     editor.putString("TaskDet0", det);
                     c1.setVisibility(View.VISIBLE);
+                    tx1.setVisibility(View.VISIBLE);
                     editor.apply();
                     tx1.setBackground(getDrawable(R.drawable.background));
                 } else if (tx2.getText().toString().isEmpty()) {
@@ -429,10 +586,12 @@ private boolean doubleBackToExitPressedOnce = false;
                     editor.putString("TaskName1", desc);
                     editor.putString("TaskDet1", det);
                     c2.setVisibility(View.VISIBLE);
+                    tx2.setVisibility(View.VISIBLE);
                     editor.apply();
                     tx2.setBackground(getDrawable(R.drawable.background));
                 } else if (tx3.getText().toString().isEmpty()) {
                     tx3.setText(desc+"\n"+det);
+                    tx3.setVisibility(View.VISIBLE);
                     editor.putString("TaskName2", desc);
                     editor.putString("TaskDet2", det);
                     c3.setVisibility(View.VISIBLE);
@@ -442,12 +601,14 @@ private boolean doubleBackToExitPressedOnce = false;
                     tx4.setText(desc+"\n"+det);
                     c4.setVisibility(View.VISIBLE);
                     editor.putString("TaskName3", desc);
+                    tx4.setVisibility(View.VISIBLE);
                     editor.putString("TaskDet3", det);
                     editor.apply();
                     tx4.setBackground(getDrawable(R.drawable.background));
                 } else if (tx5.getText().toString().isEmpty()) {
                     tx5.setText(desc+"\n"+det);
                     c5.setVisibility(View.VISIBLE);
+                    tx5.setVisibility(View.VISIBLE);
                     editor.putString("TaskName4", desc);
                     editor.putString("TaskDet4", det);
                     editor.apply();
@@ -455,6 +616,7 @@ private boolean doubleBackToExitPressedOnce = false;
                 } else if (tx6.getText().toString().isEmpty()) {
                     tx6.setText(desc+"\n"+det);
                     editor.putString("TaskName5", desc);
+                    tx6.setVisibility(View.VISIBLE);
                     c6.setVisibility(View.VISIBLE);
                     editor.putString("TaskDet5", det);
                     editor.apply();
@@ -463,12 +625,14 @@ private boolean doubleBackToExitPressedOnce = false;
                     tx7.setText(desc+"\n"+det);
                     c7.setVisibility(View.VISIBLE);
                     editor.putString("TaskName6", desc);
+                    tx7.setVisibility(View.VISIBLE);
                     editor.putString("TaskDet6", det);
                     editor.apply();
                     tx7.setBackground(getDrawable(R.drawable.background));
                 } else if (tx8.getText().toString().isEmpty()) {
                     c8.setVisibility(View.VISIBLE);
                     tx8.setText(desc+"\n"+det);
+                    tx8.setVisibility(View.VISIBLE);
                     editor.putString("TaskName7", desc);
                     editor.putString("TaskDet7", det);
                     editor.apply();
@@ -476,6 +640,7 @@ private boolean doubleBackToExitPressedOnce = false;
                 } else if (tx9.getText().toString().isEmpty()) {
                     tx9.setText(desc+"\n"+det);
                     c9.setVisibility(View.VISIBLE);
+                    tx9.setVisibility(View.VISIBLE);
                     editor.putString("TaskName8", desc);
                     editor.putString("TaskDet8", det);
                     editor.apply();
@@ -484,12 +649,14 @@ private boolean doubleBackToExitPressedOnce = false;
                     tx10.setText(desc+"\n"+det);
                     c10.setVisibility(View.VISIBLE);
                     editor.putString("TaskName9", desc);
+                    tx10.setVisibility(View.VISIBLE);
                     editor.putString("TaskDet9", det);
                     editor.apply();
                     tx10.setBackground(getDrawable(R.drawable.background));
                 } else if (tx11.getText().toString().isEmpty()) {
                     tx11.setText(desc+"\n"+det);
                     c11.setVisibility(View.VISIBLE);
+                    tx11.setVisibility(View.VISIBLE);
                     editor.putString("TaskName10", desc);
                     editor.putString("TaskDet10", det);
                     editor.apply();
@@ -497,12 +664,14 @@ private boolean doubleBackToExitPressedOnce = false;
                 } else if (tx12.getText().toString().isEmpty()) {
                     tx12.setText(desc+"\n"+det);
                     c12.setVisibility(View.VISIBLE);
+                    tx12.setVisibility(View.VISIBLE);
                     editor.putString("TaskName11", desc);
                     editor.putString("TaskDet11", det);
                     editor.apply();
                     tx12.setBackground(getDrawable(R.drawable.background));
                 } else if (tx13.getText().toString().isEmpty()) {
                     tx13.setText(desc+"\n"+det);
+                    tx13.setVisibility(View.VISIBLE);
                     c13.setVisibility(View.VISIBLE);
                     editor.putString("TaskName12", desc);
                     editor.putString("TaskDet12", det);
@@ -512,6 +681,7 @@ private boolean doubleBackToExitPressedOnce = false;
                     tx14.setText(desc+"\n"+det);
                     c14.setVisibility(View.VISIBLE);
                     editor.putString("TaskName13", desc);
+                    tx14.setVisibility(View.VISIBLE);
                     editor.putString("TaskDet13", det);
                     editor.apply();
                     tx14.setBackground(getDrawable(R.drawable.background));
@@ -519,6 +689,7 @@ private boolean doubleBackToExitPressedOnce = false;
                     tx15.setText(desc+"\n"+det);
                     c15.setVisibility(View.VISIBLE);
                     editor.putString("TaskName14", desc);
+                    tx15.setVisibility(View.VISIBLE);
                     editor.putString("TaskDet14", det);
                     editor.apply();
                     tx15.setBackground(getDrawable(R.drawable.background));
@@ -526,11 +697,13 @@ private boolean doubleBackToExitPressedOnce = false;
                     tx16.setText(desc+"\n"+det);
                     c16.setVisibility(View.VISIBLE);
                     editor.putString("TaskName15", desc);
+                    tx16.setVisibility(View.VISIBLE);
                     editor.putString("TaskDet15", det);
                     editor.apply();
                     tx16.setBackground(getDrawable(R.drawable.background));
                 } else if (tx17.getText().toString().isEmpty()) {
                     tx17.setText(desc+"\n"+det);
+                    tx17.setVisibility(View.VISIBLE);
                     c17.setVisibility(View.VISIBLE);
                     editor.putString("TaskName16", desc);
                     editor.putString("TaskDet16", det);
@@ -538,6 +711,7 @@ private boolean doubleBackToExitPressedOnce = false;
                     tx17.setBackground(getDrawable(R.drawable.background));
                 } else if (tx18.getText().toString().isEmpty()) {
                     tx18.setText(desc+"\n"+det);
+                    tx18.setVisibility(View.VISIBLE);
                     c18.setVisibility(View.VISIBLE);
                     editor.putString("TaskName17", desc);
                     editor.putString("TaskDet17", det);
@@ -546,6 +720,7 @@ private boolean doubleBackToExitPressedOnce = false;
                 } else if (tx19.getText().toString().isEmpty()) {
                     tx19.setText(desc+"\n"+det);
                     c19.setVisibility(View.VISIBLE);
+                    tx19.setVisibility(View.VISIBLE);
                     editor.putString("TaskName18", desc);
                     editor.putString("TaskDet18", det);
                     editor.apply();
@@ -553,6 +728,7 @@ private boolean doubleBackToExitPressedOnce = false;
                 } else if (tx20.getText().toString().isEmpty()) {
                     tx20.setText(desc+"\n"+det);
                     c20.setVisibility(View.VISIBLE);
+                    tx20.setVisibility(View.VISIBLE);
                     editor.putString("TaskName19", desc);
                     editor.putString("TaskDet19", det);
                     editor.apply();

@@ -74,6 +74,7 @@
              android:layout_height="90dp"
              android:layout_marginBottom="20dp"
              android:layout_marginTop="20dp"
+             android:visibility="gone"
 
              />
          <CheckBox
@@ -85,7 +86,8 @@
 
              android:layout_marginStart="8dp"
              android:layout_marginEnd="16dp"
-             android:visibility="invisible"/>
+             android:visibility="gone"
+/>
       </LinearLayout>
          <LinearLayout
           android:layout_width="match_parent"
@@ -98,6 +100,8 @@
              android:layout_height="90dp"
              android:layout_marginTop="20dp"
              android:layout_marginBottom="20dp"
+             android:visibility="gone"
+
              />
          <CheckBox
              android:id="@+id/cb2"
@@ -107,7 +111,8 @@
              android:layout_marginBottom="20dp"
              android:layout_marginStart="8dp"
              android:layout_marginEnd="16dp"
-             android:visibility="invisible"/>
+             android:visibility="gone"
+/>
       </LinearLayout><LinearLayout
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
@@ -118,6 +123,7 @@
              android:layout_width="350dp"
              android:layout_marginTop="20dp"
              android:layout_height="90dp"
+             android:visibility="gone"
              android:layout_marginBottom="20dp"
              />
          <CheckBox
@@ -128,7 +134,8 @@
              android:layout_marginBottom="20dp"
              android:layout_marginStart="8dp"
              android:layout_marginEnd="16dp"
-             android:visibility="invisible"/>
+             android:visibility="gone"
+/>
       </LinearLayout><LinearLayout
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
@@ -140,6 +147,8 @@
              android:layout_height="90dp"
              android:layout_marginTop="20dp"
              android:layout_marginBottom="20dp"
+             android:visibility="gone"
+
              />
          <CheckBox
              android:id="@+id/cb4"
@@ -149,7 +158,8 @@
              android:layout_marginTop="20dp"
              android:layout_marginStart="8dp"
              android:layout_marginEnd="16dp"
-             android:visibility="invisible"/>
+             android:visibility="gone"
+/>
       </LinearLayout><LinearLayout
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
@@ -158,6 +168,7 @@
          <TextView
              android:id="@+id/t5"
              android:layout_width="350dp"
+             android:visibility="gone"
              android:layout_marginTop="20dp"
              android:layout_height="90dp"
              android:layout_marginBottom="20dp"
@@ -169,7 +180,8 @@
              android:layout_marginBottom="20dp"
              android:layout_marginTop="20dp"
              android:layout_marginStart="8dp"
-             android:visibility="invisible"
+             android:visibility="gone"
+
              android:layout_marginEnd="16dp"/>
       </LinearLayout><LinearLayout
           android:layout_width="match_parent"
@@ -179,6 +191,7 @@
          <TextView
              android:id="@+id/t6"
              android:layout_width="350dp"
+             android:visibility="gone"
              android:layout_height="90dp"
              android:layout_marginTop="20dp"
              android:layout_marginBottom="20dp"
@@ -186,7 +199,8 @@
          <CheckBox
              android:id="@+id/cb6"
              android:layout_width="48dp"
-             android:visibility="invisible"
+             android:visibility="gone"
+
              android:layout_height="48dp"
              android:layout_marginBottom="20dp"
              android:layout_marginTop="20dp"
@@ -199,6 +213,7 @@
           android:gravity="center_vertical">
          <TextView
              android:id="@+id/t7"
+             android:visibility="gone"
              android:layout_width="350dp"
              android:layout_marginTop="20dp"
              android:layout_height="90dp"
@@ -208,7 +223,8 @@
              android:id="@+id/cb7"
              android:layout_width="48dp"
              android:layout_height="48dp"
-             android:visibility="invisible"
+             android:visibility="gone"
+
              android:layout_marginTop="20dp"
              android:layout_marginBottom="20dp"
              android:layout_marginStart="8dp"
@@ -221,13 +237,15 @@
          <TextView
              android:id="@+id/t8"
              android:layout_width="350dp"
+             android:visibility="gone"
              android:layout_marginTop="20dp"
              android:layout_height="90dp"
              android:layout_marginBottom="20dp"
              />
          <CheckBox
              android:id="@+id/cb8"
-             android:visibility="invisible"
+             android:visibility="gone"
+
              android:layout_width="48dp"
              android:layout_height="48dp"
              android:layout_marginTop="20dp"
@@ -242,13 +260,15 @@
          <TextView
              android:id="@+id/t9"
              android:layout_width="350dp"
+             android:visibility="gone"
              android:layout_height="90dp"
              android:layout_marginTop="20dp"
              android:layout_marginBottom="20dp"
              />
          <CheckBox
              android:id="@+id/cb9"
-             android:visibility="invisible"
+             android:visibility="gone"
+
              android:layout_width="48dp"
              android:layout_height="48dp"
              android:layout_marginBottom="20dp"
@@ -264,12 +284,14 @@
              android:id="@+id/t10"
              android:layout_width="350dp"
              android:layout_marginTop="20dp"
+             android:visibility="gone"
              android:layout_height="90dp"
              android:layout_marginBottom="20dp"
              />
          <CheckBox
              android:id="@+id/cb10"
-             android:visibility="invisible"
+             android:visibility="gone"
+
              android:layout_width="48dp"
              android:layout_marginTop="20dp"
              android:layout_height="48dp"
@@ -284,13 +306,15 @@
          <TextView
              android:id="@+id/t11"
              android:layout_width="350dp"
+             android:visibility="gone"
              android:layout_marginTop="20dp"
              android:layout_height="90dp"
              android:layout_marginBottom="20dp"
              />
          <CheckBox
              android:id="@+id/cb11"
-             android:visibility="invisible"
+             android:visibility="gone"
+
              android:layout_width="48dp"
              android:layout_height="48dp"
              android:layout_marginTop="20dp"
@@ -305,13 +329,15 @@
          <TextView
              android:id="@+id/t12"
              android:layout_marginTop="20dp"
+             android:visibility="gone"
              android:layout_width="350dp"
              android:layout_height="90dp"
              android:layout_marginBottom="20dp"
              />
          <CheckBox
              android:id="@+id/cb12"
-             android:visibility="invisible"
+             android:visibility="gone"
+
              android:layout_marginTop="20dp"
              android:layout_width="48dp"
              android:layout_height="48dp"
@@ -326,6 +352,7 @@
          <TextView
              android:id="@+id/t13"
              android:layout_marginTop="20dp"
+             android:visibility="gone"
              android:layout_width="350dp"
              android:layout_height="90dp"
              android:layout_marginBottom="20dp"
@@ -333,7 +360,8 @@
          <CheckBox
              android:id="@+id/cb13"
              android:layout_width="48dp"
-             android:visibility="invisible"
+             android:visibility="gone"
+
              android:layout_marginTop="20dp"
              android:layout_height="48dp"
              android:layout_marginBottom="20dp"
@@ -347,6 +375,7 @@
          <TextView
              android:layout_marginTop="20dp"
              android:id="@+id/t14"
+             android:visibility="gone"
              android:layout_width="350dp"
              android:layout_height="90dp"
              android:layout_marginBottom="20dp"
@@ -355,7 +384,8 @@
              android:id="@+id/cb14"
              android:layout_width="48dp"
              android:layout_marginTop="20dp"
-             android:visibility="invisible"
+             android:visibility="gone"
+
              android:layout_height="48dp"
              android:layout_marginBottom="20dp"
              android:layout_marginStart="8dp"
@@ -369,6 +399,7 @@
              android:id="@+id/t15"
              android:layout_marginTop="20dp"
              android:layout_width="350dp"
+             android:visibility="gone"
              android:layout_height="90dp"
              android:layout_marginBottom="20dp"
              />
@@ -377,7 +408,8 @@
              android:layout_width="48dp"
              android:layout_marginTop="20dp"
              android:layout_height="48dp"
-             android:visibility="invisible"
+             android:visibility="gone"
+
              android:layout_marginBottom="20dp"
              android:layout_marginStart="8dp"
              android:layout_marginEnd="16dp"/>
@@ -390,6 +422,7 @@
              android:id="@+id/t16"
              android:layout_width="350dp"
              android:layout_marginTop="20dp"
+             android:visibility="gone"
              android:layout_height="90dp"
              android:layout_marginBottom="20dp"
              />
@@ -400,7 +433,8 @@
              android:layout_marginBottom="20dp"
              android:layout_marginTop="20dp"
              android:layout_marginStart="8dp"
-             android:visibility="invisible"
+             android:visibility="gone"
+
              android:layout_marginEnd="16dp"/>
       </LinearLayout><LinearLayout
           android:layout_width="match_parent"
@@ -410,6 +444,7 @@
          <TextView
              android:id="@+id/t17"
              android:layout_width="350dp"
+             android:visibility="gone"
              android:layout_marginTop="20dp"
              android:layout_height="90dp"
              android:layout_marginBottom="20dp"
@@ -421,7 +456,8 @@
              android:layout_height="48dp"
              android:layout_marginBottom="20dp"
              android:layout_marginStart="8dp"
-             android:visibility="invisible"
+             android:visibility="gone"
+
              android:layout_marginEnd="16dp"/>
       </LinearLayout><LinearLayout
           android:layout_width="match_parent"
@@ -432,6 +468,7 @@
              android:id="@+id/t18"
              android:layout_marginTop="20dp"
              android:layout_width="350dp"
+             android:visibility="gone"
              android:layout_height="90dp"
              android:layout_marginBottom="20dp"
              />
@@ -441,7 +478,8 @@
              android:layout_marginTop="20dp"
              android:layout_height="48dp"
              android:layout_marginBottom="20dp"
-             android:visibility="invisible"
+             android:visibility="gone"
+
              android:layout_marginStart="8dp"
              android:layout_marginEnd="16dp"/>
       </LinearLayout><LinearLayout
@@ -454,6 +492,7 @@
              android:layout_width="350dp"
              android:layout_marginTop="20dp"
              android:layout_height="90dp"
+             android:visibility="gone"
              android:layout_marginBottom="20dp"
              />
          <CheckBox
@@ -461,7 +500,8 @@
              android:layout_width="48dp"
              android:layout_height="48dp"
              android:layout_marginBottom="20dp"
-             android:visibility="invisible"
+             android:visibility="gone"
+
              android:layout_marginStart="8dp"
              android:layout_marginTop="20dp"
              android:layout_marginEnd="16dp"/>
@@ -474,6 +514,7 @@
              android:id="@+id/t20"
              android:layout_width="350dp"
              android:layout_marginTop="20dp"
+             android:visibility="gone"
              android:layout_height="90dp"
              android:layout_marginBottom="20dp"
              />
@@ -484,7 +525,8 @@
              android:layout_height="48dp"
              android:layout_marginBottom="20dp"
              android:layout_marginStart="8dp"
-             android:visibility="invisible"
+             android:visibility="gone"
+
              android:layout_marginEnd="16dp"/>
       </LinearLayout>
 
