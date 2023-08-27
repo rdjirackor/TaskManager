@@ -27,6 +27,7 @@ public class Done extends AppCompatActivity {
         t1 = findViewById(R.id.t1);
         t2 = findViewById(R.id.t2);
         t3 = findViewById(R.id.t3);
+        //Not pushed from local repository yet
         String firstN = preferences.getString("DoneTaskName0","");
         String firstD = preferences.getString("DoneTaskDet0","");
         String secN = preferences.getString("DoneTaskName1","");
