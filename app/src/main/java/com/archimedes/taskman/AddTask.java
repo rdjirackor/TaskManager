@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -54,8 +55,9 @@ public class AddTask extends AppCompatActivity {
             editor = preferences.edit();
             Drawable drawable = getResources().getDrawable(R.drawable.background);
             Drawable drawable1 = getResources().getDrawable(R.drawable.button_modes);
+            Drawable drawable2 = getResources().getDrawable(R.drawable.button_modeees);
             FloatingActionButton open = findViewById(R.id.floatingActionButton);
-            open.setBackground(drawable1);
+            open.setBackground(drawable2);
 
             open.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -66,11 +68,13 @@ public class AddTask extends AppCompatActivity {
 
 
             });
-            Button active =findViewById(R.id.Active);
+            ImageButton active =findViewById(R.id.Active);
             active.setBackground(drawable1);
 
-            Button done = findViewById(R.id.Done);
-            done.setOnClickListener(new View.OnClickListener() {
+            ImageButton done = findViewById(R.id.Done);
+            done.setBackground(drawable2);
+
+        done.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     openDone();
@@ -504,15 +508,15 @@ public class AddTask extends AppCompatActivity {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (isChecked) {
-                        String FiN= preferences.getString("TaskName0", "");
-                        String FiD= preferences.getString("TaskDet0", "");
+                        String FiN= preferences.getString("TaskName1", "");
+                        String FiD= preferences.getString("TaskDet1", "");
                         editor.putString("DoneTaskName1",FiN);
                         editor.putString("DoneTaskDet1",FiD);
                         editor.putString("TaskName1","");
                         editor.putString("TaskDet1","");
                         editor.apply();
-                        tx1.setVisibility(View.GONE);
-                        c1.setVisibility(View.GONE);
+                        tx2.setVisibility(View.GONE);
+                        c2.setVisibility(View.GONE);
 
                        // refresh();
 
@@ -524,15 +528,15 @@ public class AddTask extends AppCompatActivity {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (isChecked) {
-                        String FiN= preferences.getString("TaskName0", "");
-                        String FiD= preferences.getString("TaskDet0", "");
+                        String FiN= preferences.getString("TaskName2", "");
+                        String FiD= preferences.getString("TaskDet2", "");
                         editor.putString("DoneTaskName2",FiN);
                         editor.putString("DoneTaskDet2",FiD);
                         editor.putString("TaskName2","");
                         editor.putString("TaskDet2","");
                         editor.apply();
-                        tx1.setVisibility(View.GONE);
-                        c1.setVisibility(View.GONE);
+                        tx3.setVisibility(View.GONE);
+                        c3.setVisibility(View.GONE);
 
                        // refresh();
 

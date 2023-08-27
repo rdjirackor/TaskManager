@@ -10,11 +10,13 @@ package com.archimedes.taskman;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.SeekBar;
 import android.widget.Toast;
 
@@ -33,6 +35,8 @@ public class EditTask extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.edit_task);
+        Drawable drawable1 = getResources().getDrawable(R.drawable.button_modes);
+
 
         // Initialize SharedPreferences
         preferences = getSharedPreferences("SavedStuff", Context.MODE_PRIVATE);
@@ -40,13 +44,13 @@ public class EditTask extends AppCompatActivity {
         count = preferences.getInt("Count", 0);
 
         SeekBar seekerSensitive = findViewById(R.id.seekBar);
-        Button saveTask = findViewById(R.id.saveTask);
+        ImageButton saveTask = findViewById(R.id.saveTask);
         editName = findViewById(R.id.editN);
         editDesc = findViewById(R.id.editD);
         editNote = findViewById(R.id.editD2);
-
+        saveTask.setBackground(drawable1);
         //Button test =findViewById(R.id.TestingPL);
-        // P means Priority, I forgot the meaning of L, but hey I've deleted the Button anyway
+        // P means Priority, I forgot the meaning of L, but hey I've deleted the Button anyway, needed it for a quick test
 
 
 
