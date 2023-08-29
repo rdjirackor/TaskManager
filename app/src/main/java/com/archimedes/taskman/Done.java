@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -139,57 +138,57 @@ public class Done extends AppCompatActivity {
                     t7.setVisibility(View.VISIBLE);
                     t7.setBackground(drawable);
                 }t8.setText(eigN+"\n"+eigD);
+        if(!t8.equals("")) {
+                    t8.setVisibility(View.VISIBLE);
+                    t8.setBackground(drawable);
+                }t9.setText(ninN+"\n"+ninD);
         if(!t9.equals("")) {
                     t9.setVisibility(View.VISIBLE);
                     t9.setBackground(drawable);
-                }t3.setText(thirdN+"\n"+thirdD);
-        if(!t3.equals("")) {
-                    t3.setVisibility(View.VISIBLE);
-                    t3.setBackground(drawable);
-                }t3.setText(thirdN+"\n"+thirdD);
-        if(!t3.equals("")) {
-                    t3.setVisibility(View.VISIBLE);
-                    t3.setBackground(drawable);
-                }t3.setText(thirdN+"\n"+thirdD);
-        if(!t3.equals("")) {
-                    t3.setVisibility(View.VISIBLE);
-                    t3.setBackground(drawable);
-                }t3.setText(thirdN+"\n"+thirdD);
-        if(!t3.equals("")) {
-                    t3.setVisibility(View.VISIBLE);
-                    t3.setBackground(drawable);
-                }t3.setText(thirdN+"\n"+thirdD);
-        if(!t3.equals("")) {
-                    t3.setVisibility(View.VISIBLE);
-                    t3.setBackground(drawable);
-                }t3.setText(thirdN+"\n"+thirdD);
-        if(!t3.equals("")) {
-                    t3.setVisibility(View.VISIBLE);
-                    t3.setBackground(drawable);
-                }t3.setText(thirdN+"\n"+thirdD);
-        if(!t3.equals("")) {
-                    t3.setVisibility(View.VISIBLE);
-                    t3.setBackground(drawable);
-                }t3.setText(thirdN+"\n"+thirdD);
-        if(!t3.equals("")) {
-                    t3.setVisibility(View.VISIBLE);
-                    t3.setBackground(drawable);
-                }t3.setText(thirdN+"\n"+thirdD);
-        if(!t3.equals("")) {
-                    t3.setVisibility(View.VISIBLE);
-                    t3.setBackground(drawable);
-                }t3.setText(thirdN+"\n"+thirdD);
-        if(!t3.equals("")) {
-                    t3.setVisibility(View.VISIBLE);
-                    t3.setBackground(drawable);
-                }t3.setText(thirdN+"\n"+thirdD);
-        if(!t3.equals("")) {
-                    t3.setVisibility(View.VISIBLE);
-                    t3.setBackground(drawable);
-                }t3.setText(thirdN+"\n"+thirdD);
-        if(!t3.equals("")) {
-                    t3.setVisibility(View.VISIBLE);
-                    t3.setBackground(drawable);
+                }t10.setText(tenN+"\n"+tenD);
+        if(!t10.equals("")) {
+                    t10.setVisibility(View.VISIBLE);
+                    t10.setBackground(drawable);
+                }t11.setText(eleN+"\n"+eleD);
+        if(!t11.equals("")) {
+                    t11.setVisibility(View.VISIBLE);
+                    t11.setBackground(drawable);
+                }t12.setText(tweN+"\n"+tweD);
+        if(!t12.equals("")) {
+                    t12.setVisibility(View.VISIBLE);
+                    t12.setBackground(drawable);
+                }t13.setText(thirN+"\n"+thirD);
+        if(!t13.equals("")) {
+                    t13.setVisibility(View.VISIBLE);
+                    t13.setBackground(drawable);
+                }t14.setText(fourtN+"\n"+fourtD);
+        if(!t14.equals("")) {
+                    t14.setVisibility(View.VISIBLE);
+                    t14.setBackground(drawable);
+                }t15.setText(fivtN+"\n"+fivtD);
+        if(!t15.equals("")) {
+                    t15.setVisibility(View.VISIBLE);
+                    t15.setBackground(drawable);
+                }t16.setText(sixtN+"\n"+sixtD);
+        if(!t16.equals("")) {
+                    t16.setVisibility(View.VISIBLE);
+                    t16.setBackground(drawable);
+                }t17.setText(sevtN+"\n"+sevtD);
+        if(!t17.equals("")) {
+                    t17.setVisibility(View.VISIBLE);
+                    t17.setBackground(drawable);
+                }t18.setText(eigthN+"\n"+eigthD);
+        if(!t18.equals("")) {
+                    t18.setVisibility(View.VISIBLE);
+                    t18.setBackground(drawable);
+                }t19.setText(ninetN+"\n"+ninetD);
+        if(!t19.equals("")) {
+                    t19.setVisibility(View.VISIBLE);
+                    t19.setBackground(drawable);
+                }t20.setText(twentyN+"\n"+twentyD);
+        if(!t20.equals("")) {
+                    t20.setVisibility(View.VISIBLE);
+                    t20.setBackground(drawable);
                 }
 
 
