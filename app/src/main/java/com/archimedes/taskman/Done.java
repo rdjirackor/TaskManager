@@ -25,8 +25,8 @@ public class Done extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.done);
         Drawable drawable = getResources().getDrawable(R.drawable.background);
-        Drawable drawable1 = getResources().getDrawable(R.drawable.button_modes);
-        Drawable drawable2 = getResources().getDrawable(R.drawable.button_modeees);
+        Drawable drawable1 = getResources().getDrawable(R.drawable.button_modeees);
+        Drawable drawable2 = getResources().getDrawable(R.drawable.button_modes);
         preferences = getSharedPreferences("SavedStuff", Context.MODE_PRIVATE);
         editor = preferences.edit();
         t1 = findViewById(R.id.t1);
