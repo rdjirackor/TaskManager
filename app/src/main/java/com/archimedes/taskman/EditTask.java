@@ -7,20 +7,28 @@ package com.archimedes.taskman;
 
  */
 
+import android.Manifest;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.SeekBar;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.app.NotificationCompat;
+import androidx.core.content.ContextCompat;
 
 public class EditTask extends AppCompatActivity {
     int priority = 1;
@@ -36,6 +44,12 @@ public class EditTask extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.edit_task);
         Drawable drawable1 = getResources().getDrawable(R.drawable.button_modes);
+        if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.TIRAMISU){
+            if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.POST_NOTIFICATIONS)!=
+                    PackageManager.PERMISSION_GRANTED){
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.POST_NOTIFICATIONS},101);
+            }
+        }
 
 
         // Initialize SharedPreferences
@@ -149,6 +163,40 @@ public class EditTask extends AppCompatActivity {
         resultIntent.putExtra("descriptionName", "TaskName: "+TaskName);
         resultIntent.putExtra("descriptionDet","TaskDesc:"+TaskDesc);
         setResult(RESULT_OK, resultIntent);
+        launchNotification("Task Created: "+ TaskName,"Task Details :"+TaskDesc);
         finish();
+    }
+    public void launchNotification(String TaskName, String TaskDet){
+        String CHANNEL_ID ="ImpendingTask";
+
+
+        NotificationCompat.Builder builder =
+                new NotificationCompat.Builder(getApplicationContext(),CHANNEL_ID);
+                builder.setSmallIcon(R.drawable.ic_launcher_background)
+                .setContentTitle(TaskName)
+                .setContentText(TaskDet)
+                .setAutoCancel(true)
+                .setPriority(NotificationCompat.PRIORITY_MAX);
+
+        Intent intent = new Intent(getApplicationContext(),AddTask.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(),0,intent,PendingIntent.FLAG_MUTABLE);
+        builder.setContentIntent(pendingIntent);
+        NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            NotificationChannel notificationChannel =
+                    notificationManager.getNotificationChannel(CHANNEL_ID);
+            if (notificationChannel==null){
+                int importance = NotificationManager.IMPORTANCE_HIGH;
+                notificationChannel=new NotificationChannel(CHANNEL_ID,"Created Task",importance);
+                notificationChannel.setLightColor(Color.GREEN);
+                notificationChannel.enableVibration(true);
+                notificationChannel.enableLights(true);
+               // notificationChannel.setImportance(2);
+                notificationManager.createNotificationChannel(notificationChannel);
+            }
+
+        }
+        notificationManager.notify(0,builder.build());
     }
 }

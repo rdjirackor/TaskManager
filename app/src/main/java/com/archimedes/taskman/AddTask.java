@@ -1,11 +1,18 @@
 package com.archimedes.taskman;
 
+import android.Manifest;
+import android.app.Activity;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -17,6 +24,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.app.NotificationCompat;
+import androidx.core.content.ContextCompat;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 public class AddTask extends AppCompatActivity {
@@ -58,6 +68,7 @@ public class AddTask extends AppCompatActivity {
             Drawable drawable2 = getResources().getDrawable(R.drawable.button_modeees);
             FloatingActionButton open = findViewById(R.id.floatingActionButton);
             open.setBackground(drawable2);
+
 
             open.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -1161,6 +1172,7 @@ private boolean doubleBackToExitPressedOnce = false;
         Intent intent=new Intent(this,Done.class);
         startActivity(intent);
         }
+
 
 
 }

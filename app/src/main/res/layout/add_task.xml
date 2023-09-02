@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AddTask"
-    android:background="@color/white"
     >
 
 
@@ -21,7 +20,8 @@
        android:layout_margin="8dp"
        android:src="@drawable/googleg_standard_color_18"
        android:text="Done"
-       android:contentDescription="TODO" />
+       android:contentDescription="TODO"
+      />
 
    <ImageButton
        android:id="@+id/Active"
@@ -35,7 +35,8 @@
        android:layout_margin="8dp"
        android:src="@drawable/googleg_disabled_color_18"
        android:text="Active"
-       android:contentDescription="TODO" />
+       android:contentDescription="TODO"
+       />
 
 
    <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -57,11 +58,12 @@
    <ScrollView
        android:layout_width="match_parent"
        android:layout_height="match_parent"
-       android:layout_marginTop="70dp"
+       android:layout_marginTop="90dp"
        app:layout_constraintBottom_toBottomOf="parent"
        app:layout_constraintEnd_toEndOf="parent"
        app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintTop_toTopOf="parent">
+       app:layout_constraintTop_toTopOf="parent"
+       android:background="@color/white">
 
       <LinearLayout
           android:layout_width="match_parent"
