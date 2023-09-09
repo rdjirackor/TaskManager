@@ -18,17 +18,17 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true"><intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter> </activity>
         <activity android:name=".Login" />
         <activity android:name=".CreateAccount" />
         <activity
             android:name=".AddTask"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".EditTask" />
         <activity android:name=".Done" />

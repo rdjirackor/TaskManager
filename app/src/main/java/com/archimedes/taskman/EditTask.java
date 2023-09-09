@@ -178,7 +178,7 @@ public class EditTask extends AppCompatActivity {
                 .setAutoCancel(true)
                 .setPriority(NotificationCompat.PRIORITY_MAX);
 
-        Intent intent = new Intent(getApplicationContext(),AddTask.class);
+        Intent intent = new Intent(getApplicationContext(),AddTask .class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(),0,intent,PendingIntent.FLAG_MUTABLE);
         builder.setContentIntent(pendingIntent);
