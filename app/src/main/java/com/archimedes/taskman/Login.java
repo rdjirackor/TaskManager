@@ -28,6 +28,9 @@ public class Login extends AppCompatActivity {
         password.setTypeface(null, Typeface.BOLD);
         password.setTextColor(Color.BLACK);
 
+        Button forgotPass=findViewById(R.id.forgotPass);
+
+
         Button loginBut=findViewById(R.id.loginbutton);
         SharedPreferences preferences = getSharedPreferences("SavedStuff", Context.MODE_PRIVATE);
 

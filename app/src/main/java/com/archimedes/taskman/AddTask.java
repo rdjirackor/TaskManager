@@ -1172,8 +1172,5 @@ private boolean doubleBackToExitPressedOnce = false;
         Intent intent=new Intent(this,Done.class);
         startActivity(intent);
         }
-
-
-
 }
 
